@@ -9,7 +9,7 @@
 // nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
 
-let lista = document.getElementById("listaStudenti")
+
 
 // Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 
@@ -27,26 +27,18 @@ for (let proprietà in descrizioneStudente ) {
 
 // Creare un array di oggetti di studenti.
 
-let arrayStudenti = [{
-    nome: "Alessandro", cognome: "uno", età: 30},
+let arrayStudenti = [
+    {nome: "Alessandro", cognome: "uno", età: 30},
     { nome: "Fabrizio", cognome: "due", età: 25},
     { nome: "Ilario", cognome: "tre", età: 20}
 ]
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 
-for (let i = 0; i< arrayStudenti.length; i++) {
-    let lista = arrayStudenti[i];
-    console.log(lista.nome + " " + lista.cognome);
-  
-}
-
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un 
 // nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
-
-
-let studenteNuovo = descrizioneStudente;
+let studenteNuovo ={};
 
 studenteNuovo.nome = prompt("nome");
 studenteNuovo.cognome = prompt("cognome");
@@ -55,3 +47,10 @@ studenteNuovo.età = parseInt(prompt("età"));
 arrayStudenti.push(studenteNuovo);
 
 console.log(arrayStudenti);
+
+
+for (let i = 0; i < arrayStudenti.length; i++) {
+    let lista = arrayStudenti[i];
+    console.log(lista.nome + " " + lista.cognome);
+    document.getElementById("listaStudenti").innerHTML += "<li>" + lista.nome + " " + lista.cognome + "</li >";
+}
