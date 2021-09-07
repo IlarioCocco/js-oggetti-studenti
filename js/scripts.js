@@ -5,7 +5,8 @@
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 // Creare un array di oggetti di studenti.
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
-// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un 
+// nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
 
 let lista = document.getElementById("listaStudenti")
@@ -13,9 +14,9 @@ let lista = document.getElementById("listaStudenti")
 // Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 
 let descrizioneStudente = {
-    "nome": " ",
-    "cognome": " ",
-    "età": 0
+    nome: "Marco",
+    cognome: "quattro",
+    età: 15
 }
 
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
@@ -27,9 +28,9 @@ for (let proprietà in descrizioneStudente ) {
 // Creare un array di oggetti di studenti.
 
 let arrayStudenti = [{
-    "nome": "Alessandro", "cognome": "uno", "età": 30},
-    { "nome": "Fabrizio", "cognome": "due", "età": 25},
-    { "nome": "Ilario", "cognome": "tre", "età": 20}
+    nome: "Alessandro", cognome: "uno", età: 30},
+    { nome: "Fabrizio", cognome: "due", età: 25},
+    { nome: "Ilario", cognome: "tre", età: 20}
 ]
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
@@ -37,5 +38,24 @@ let arrayStudenti = [{
 for (let i = 0; i< arrayStudenti.length; i++) {
     let lista = arrayStudenti[i];
     console.log(lista.nome + " " + lista.cognome);
-    document.getElementById("listaStudenti")= innerHtml;
+  
 }
+
+// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un 
+// nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+let nuoviDatiStudente = {
+    nome: " ",
+    cognome: " ",
+    età: 0,
+}
+
+let studenteNuovo = nuoviDatiStudente;
+
+studenteNuovo.nome = prompt("nome");
+studenteNuovo.cognome = prompt("cognome");
+studenteNuovo.età = parseInt(prompt("età"));
+
+arrayStudenti.push(studenteNuovo);
+
+alert(nuoviDatiStudente);
