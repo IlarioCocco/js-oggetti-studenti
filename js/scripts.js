@@ -44,13 +44,9 @@ for (let i = 0; i< arrayStudenti.length; i++) {
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un 
 // nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
-let nuoviDatiStudente = {
-    nome: " ",
-    cognome: " ",
-    età: 0,
-}
 
-let studenteNuovo = nuoviDatiStudente;
+
+let studenteNuovo = descrizioneStudente;
 
 studenteNuovo.nome = prompt("nome");
 studenteNuovo.cognome = prompt("cognome");
@@ -58,4 +54,4 @@ studenteNuovo.età = parseInt(prompt("età"));
 
 arrayStudenti.push(studenteNuovo);
 
-alert(nuoviDatiStudente);
+console.log(arrayStudenti);
