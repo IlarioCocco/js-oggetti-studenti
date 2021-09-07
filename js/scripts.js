@@ -52,5 +52,5 @@ console.log(arrayStudenti);
 for (let i = 0; i < arrayStudenti.length; i++) {
     let lista = arrayStudenti[i];
     console.log(lista.nome + " " + lista.cognome);
-    document.getElementById("listaStudenti").innerHTML += "<li>" + lista.nome + " " + lista.cognome + "</li >";
+    document.getElementById("listaStudenti").innerHTML += "Nuovo Studente: " + "<li>" + lista.nome + " " + lista.cognome + " " + lista.età + "</li >";
 }
