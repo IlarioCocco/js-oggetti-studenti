@@ -8,18 +8,34 @@
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
 
-var lista = document.getElementById("listaStudenti")
+let lista = document.getElementById("listaStudenti")
 
 // Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 
-var descrizioneStudente = {
-    "nome": "Ilario",
-    "cognome": "Cocco",
-    "età": 47
+let descrizioneStudente = {
+    "nome": " ",
+    "cognome": " ",
+    "età": 0
 }
 
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 
-for (var proprietà in descrizioneStudente ) {
-    console.log()
+for (let proprietà in descrizioneStudente ) {
+    console.log(proprietà + " " + descrizioneStudente[proprietà]);
+}
+
+// Creare un array di oggetti di studenti.
+
+let arrayStudenti = [{
+    "nome": "Alessandro", "cognome": "uno", "età": 30},
+    { "nome": "Fabrizio", "cognome": "due", "età": 25},
+    { "nome": "Ilario", "cognome": "tre", "età": 20}
+]
+
+// Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+
+for (let i = 0; i< arrayStudenti.length; i++) {
+    let lista = arrayStudenti[i];
+    console.log(lista.nome + " " + lista.cognome);
+    document.getElementById("listaStudenti")= innerHtml;
 }
